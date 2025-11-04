@@ -48,26 +48,27 @@ const Navbar = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4">
-      <div className="flex items-center justify-between h-16">
+      <div className="flex items-center justify-between h-16 ">
         <Link to="/">
           <h1 className="font-extrabold text-2xl text-red-600">PashaEats</h1>
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-10">
-          <div className="flex items-center gap-6 font-medium text-gray-700">
-            <Link className="hover:text-red-600 transition" to="/">Home</Link>
-            <Link className="hover:text-red-600 transition" to="/profile">Profile</Link>
-            <Link className="hover:text-red-600 transition" to="/order/status">Order</Link>
+        <div className="hidden md:flex items-center gap-4">
+          <div className="flex items-center gap-3 font-medium text-gray-700">
+            <button className="rounded-3xl border py-2 px-4"> <Link className="hover:text-red-700 text-red-500 transition" to="/">Home</Link></button>
+            <button className="rounded-3xl border py-2 px-4"> <Link className="hover:text-red-700 text-red-500 transition" to="/profile">Profile</Link></button>
+            <button className="rounded-3xl border py-2 px-4"> <Link className="hover:text-red-700 text-red-500 transition" to="/order/status">Order</Link></button>
+            
 
             {user?.admin && (
               <Menubar>
                 <MenubarMenu>
                   <MenubarTrigger className="hover:text-red-600 transition">Dashboard</MenubarTrigger>
                   <MenubarContent className="bg-white rounded-lg shadow-lg border border-gray-200">
-                    <Link to="/admin/restaurant"><MenubarItem>Restaurant</MenubarItem></Link>
-                    <Link to="/admin/menu"><MenubarItem>Menu</MenubarItem></Link>
-                    <Link to="/admin/orders"><MenubarItem>Orders</MenubarItem></Link>
+                    <Link to="/admin/restaurant"><MenubarItem className="dark:text-black dark:hover:text-white">Restaurant</MenubarItem></Link>
+                    <Link to="/admin/menu"><MenubarItem className="dark:text-black dark:hover:text-white">Menu</MenubarItem></Link>
+                    <Link to="/admin/orders"><MenubarItem className="dark:text-black dark:hover:text-white">Orders</MenubarItem></Link>
                   </MenubarContent>
                 </MenubarMenu>
               </Menubar>
@@ -80,8 +81,8 @@ const Navbar = () => {
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="outline" size="icon" className="p-2 rounded-full hover:bg-gray-100 transition">
-                  <Sun className="h-5 w-5 dark:hidden" />
-                  <Moon className="h-5 w-5 hidden dark:block" />
+                  <Sun className="h-5 w-5 dark:hidden text-black" />
+                  <Moon className="h-5 w-5 hidden dark:block text-black" />
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="rounded-lg shadow-lg border border-gray-200">

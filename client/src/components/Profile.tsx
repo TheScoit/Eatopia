@@ -63,7 +63,7 @@ const Profile = () => {
   return (
     <form
       onSubmit={updateProfileHandler}
-      className="max-w-3xl mx-auto my-10 p-6 bg-white rounded-2xl shadow-xl border border-gray-200 transition-all"
+      className="max-w-3xl mx-auto my-10 p-6 bg-white dark:bg-gray-800 dark:text-red-500 rounded-2xl shadow-xl border border-gray-200 transition-all"
     >
       {/* Top Section: Profile Picture + Name */}
       <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10">
@@ -155,7 +155,7 @@ const Profile = () => {
       <div className="mt-10 text-center">
         <Button
           type="submit"
-          className="bg-gradient-to-r from-violet-500 to-violet-300 text-white px-8 py-2 rounded-xl hover:scale-105 transition-transform shadow-lg"
+          className="bg-gradient-to-r from-red-500 to-red-600 text-white px-8 py-2 rounded-xl hover:scale-105 transition-transform shadow-lg"
           disabled={isLoading}
         >
           {isLoading && (
